@@ -1,0 +1,350 @@
+html {
+    scroll-behavior: smooth; /*para que al hacer clik en un anchor o button con un id la pag se deslice suevemente y no se haga*/
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    
+}
+
+/*configuracion estetica scrollbar (barra de subir y bajar la pagina a la izquierda)*/
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #e3ebef;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #e3ebef;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #9fb6c3;
+    -webkit-box-shadow: none;
+    height: 1px;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #9fb6c3
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+header {
+
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    color: #0073e6;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0;
+    color: #0274e6;
+}
+
+/*configuraciond de la nav bar*/
+nav {
+    background-color: #ffffff;
+    text-align: right;
+    padding: 0.4rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 301;
+    border-style: groove;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    padding-top: 25px;
+    padding-right: 50px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: rgb(24, 10, 10);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+/*configuracion botones nav*/
+.elementos-nav {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 900;
+    padding: 0 !important;
+}
+
+/*animacion de los botones de la nav bar*/
+nav ul li a:hover {
+    color: #FF9A00;
+}
+
+/*caja grande sobre toda la pag*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #0073e6;
+    margin: 0.5rem auto;
+}
+
+/*cards*/
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/*animacion cards*/
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/*Titulos cards*/
+.service-item h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/*descripcion de las cards (descripcion de el servicio)*/
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/*comentarios de la gente*/
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #0073e6;
+    margin: 1.5rem 10px;
+    padding: 1rem 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-style: italic;
+    color: #555;
+}
+
+blockquote p {
+    display: inline;
+}
+
+/*configuracion de la estetica del citado (nombre de quien escribio la reseña)*/
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #461515;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/*boton menu de hamburgresa*/
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/*animacion boton hamburgresa*/
+button:hover {
+    background-color: #005bb5;
+}
+
+/*seccion de contacto*/
+.contact-info {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.contact-info a {
+    color: #0073e6;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+/*animacion anchor de instagram*/
+.contact-info a:hover {
+    color: #005bb5;
+}
+
+footer {
+    background-color: #f4f4f4;
+    color: rgb(34, 34, 34);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .container {
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*tamaño de los iconos de las cards*/
+.icon-scale {
+    font-size: 80px;
+}
+
+/*boton para ir al inico de la pag (ariba de todo)*/
+.buton-inicio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0073e6;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.section__divide {
+    display: block;
+    width: 90%;
+    height: 1px;
+    margin: 2rem;
+    background-color: #000;
+    opacity: .2;
+    margin-left: 4rem;
+}
+
+/*clase color y negrita del Copyright(footer)*/
+
+.azul {
+    color:#0073e6;
+    font-weight: 800;
+    text-align: center;
+}
+/*clase color especifico*/
+.naranja {
+    color:#FF9A00;
+    }
+
+/*configuracion de cuando aparece el menu de hamburgresa*/
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 1rem;
+    float: right;
+    background-color: #0073e6;
+}
+
+/*configuracion de el menu de hamburgresa*/
+@media (max-width: 600px) {
+    nav ul {
+        display: none; /* Ocultar el menu en celu */
+        flex-direction: column; /* Cambiar columna o filas*/
+        position: absolute; /* Posicionarlo */
+        background-color: rgb(240, 240, 240); /* Fondo */
+        top: 60px; /* Ajusta según sea necesario */
+        right: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 100%; /* Ancho */
+        z-index: 1000; /* Asegurarse que este arriba de lo demas */
+        top: 105px;
+        border-radius: 5%;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex; /* Mostrar menu cuando se activa */
+        padding-right: 0px;
+        
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el boton de hamburguesa en celulares */
+    }
+}
+
+/*configuracion del logo de la empresa (el que se encuentra en la nav)*/
+.logo img {
+    height: 75px; 
+    cursor: pointer;
+    float: left;
+    padding-left: 9px;
+}
+
+li {
+    padding-right: 10px;
+}
+/*configuracion para que los hr no sean visibles*/
+.hr-hidden {
+border: none;
+}
